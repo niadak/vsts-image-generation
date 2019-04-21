@@ -237,8 +237,8 @@
         {
             "type": "powershell",
             "environment_vars": [
-                "GO_VERSIONS=1.10.8,1.11.5,1.12",
-                "GO_DEFAULT=1.12"
+                "GO_VERSIONS=1.10.8,1.11.6,1.12.1",
+                "GO_DEFAULT=1.12.1"
             ],
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Install-Go.ps1"
@@ -453,6 +453,12 @@
             ]
         },
         {
+            "type": "powershell",
+            "scripts":[
+                "{{ template_dir }}/scripts/Installers/Install-Vcpkg.ps1"
+            ]
+        },
+        {
             "type": "windows-restart",
             "restart_timeout": "10m"
         },
@@ -501,8 +507,8 @@
         {
             "type": "powershell",
             "environment_vars": [
-                "GO_VERSIONS=1.10.8,1.11.5,1.12",
-                "GO_DEFAULT=1.12"
+                "GO_VERSIONS=1.10.8,1.11.6,1.12.1",
+                "GO_DEFAULT=1.12.1"
             ],
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Validate-Go.ps1"
@@ -666,6 +672,12 @@
             "type": "powershell",
             "scripts":[
                 "{{ template_dir }}/scripts/Installers/Validate-CloudFoundryCli.ps1"
+            ]
+        },
+        {
+            "type": "powershell",
+            "scripts":[
+                "{{ template_dir }}/scripts/Installers/Validate-Vcpkg.ps1"
             ]
         },
         {

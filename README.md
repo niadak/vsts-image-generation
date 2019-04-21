@@ -1,13 +1,20 @@
 
-# ![Azure Pipelines](/docs/resources/DevOpsIconPipelines40.png "Azure Pipelines") Azure Pipelines VM images for Microsoft-hosted CI/CD
+# ![Azure Pipelines](/help/resources/DevOpsIconPipelines40.png "Azure Pipelines") Azure Pipelines VM images for Microsoft-hosted CI/CD
 
 ## Overview
 
 This repo contains scripts that generate the Linux and Windows virtual machine images used by [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/?nav=min) for [Microsoft-hosted CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=vsts&tabs=yaml). The macOS image scripts are not kept here, but its contents are documented here. The images are generated using [Packer](https://www.packer.io/).
 
+## Following image updates
+Image updates are deployed every 3 weeks. You can follow releases [here](https://github.com/Microsoft/azure-pipelines-image-generation/releases). Consider enabling **Watch -> Releases only** at the top of the page.
+
+## Notifications
+Subscribe to [this RSS feed](https://microsoft.github.io/azure-pipelines-image-generation/) to be notified of upcoming image changes and other important messages. General Azure Pipelines service health is found [here](https://status.dev.azure.com/).
+
 # Image contents
 
-- [macOS 10.13](images/macos/macos-Readme.md)
+- [macOS 10.13](images/macos/macos-10.13-Readme.md)
+- [macOS 10.14](images/macos/macos-10.14-Readme.md)
 - [Ubuntu 16.04](images/linux/Ubuntu1604-README.md)
 - [VS 2019 + Windows Server 2019](images/win/Vs2019-Server2019-Readme.md)
 - [VS 2017 + Windows Server 2016](images/win/Vs2017-Server2016-Readme.md)
@@ -26,7 +33,7 @@ If you have an issue or request for an image, please create an issue in this rep
 
 ### Windows
 
-- [Instructions to build Windows images](docs/CreateImageAndAzureResources.md)
+- [Instructions to build Windows images](/help/CreateImageAndAzureResources.md)
 - [How to use Packer to create Windows VM images in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/build-image-with-packer)
 
 ## Contributing
